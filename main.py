@@ -2,12 +2,13 @@ import httplib2
 from bs4 import BeautifulSoup, SoupStrainer
 import json
 import requests
+import re
 http = httplib2.Http()
 
 
 # Generated links are saved here
-file_to_write = "links.txt"
-json_file = "links.json"
+file_to_write = "docs/links.txt"
+json_file = "docs/links.json"
 json_data = []
 directory_links = "lists.txt"
 
@@ -79,7 +80,7 @@ def main():
 	for link in url:
 		print("%s%s" %(host, link))
 		crawl_directory(link)
-		create_json()
+	create_json()
 
 
 main()
