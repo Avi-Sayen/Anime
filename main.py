@@ -1,6 +1,7 @@
 import httplib2
 from bs4 import BeautifulSoup, SoupStrainer
 import json
+import requests
 http = httplib2.Http()
 
 
@@ -9,7 +10,10 @@ file_to_write = "links.txt"
 json_file = "links.json"
 json_data = []
 directory_links = "lists.txt"
-host =
+
+link = "https://avi-sayen.github.io/Anime/"
+send = requests.get(link)
+host = send.text
 
 
 # Read file and save as list to a variable 
