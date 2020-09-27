@@ -9,7 +9,7 @@ file_to_write = "links.txt"
 json_file = "links.json"
 json_data = []
 directory_links = "lists.txt"
-host = "http://ml1.alserver.art/"
+host =
 
 
 # Read file and save as list to a variable 
