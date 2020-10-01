@@ -9,15 +9,19 @@ http = httplib2.Http()
 # Generated links are saved here
 file_to_write = "docs/links.txt"
 json_file = "docs/links.json"
+
+
 json_data = []
+
+# This file contains the directory links to scan
 directory_links = "lists.txt"
 
+# Get the root domian name
 link = "https://avi-sayen.github.io/Anime/"
 send = requests.get(link)
 host = send.text
 
 
-# Read file and save as list to a variable 
 with open(directory_links, "r") as file:
 	url = file.read().splitlines()
 
